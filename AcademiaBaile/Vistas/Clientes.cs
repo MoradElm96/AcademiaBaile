@@ -18,13 +18,13 @@ namespace AcademiaBaile.Vistas
         }
 
 
-        DataSet dataSet = Controladores.ControladorClientes.recuperarClientesDataSet();
+        DataSet dataSet = new DataSet();
 
         public void cargarDatos()
         {
 
-           
-            
+            dataSet = Controladores.ControladorClientes.recuperarClientesDataSet();
+            dataGridView1.Refresh();
             dataGridView1.DataSource = dataSet.Tables[0];
            
            
@@ -44,7 +44,7 @@ namespace AcademiaBaile.Vistas
             if (Controladores.ControladorClientes.guardarDatosDataSet(this.dataSet))
             {
                 MessageBox.Show("Datos guardados");
-                dataGridView1.Refresh();
+              
                 cargarDatos();
 
             }
@@ -82,7 +82,7 @@ namespace AcademiaBaile.Vistas
 
             }
             MessageBox.Show("Se han eliminado " + contadorBorrados + " Clientes");
-            dataGridView1.Refresh();
+          
             cargarDatos();
 
         }
