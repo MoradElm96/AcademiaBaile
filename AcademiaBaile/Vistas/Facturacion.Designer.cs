@@ -44,85 +44,98 @@ namespace AcademiaBaile.Vistas
             // 
             this.lblFacturacion.AutoSize = true;
             this.lblFacturacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFacturacion.Location = new System.Drawing.Point(456, 70);
+            this.lblFacturacion.Location = new System.Drawing.Point(342, 57);
+            this.lblFacturacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFacturacion.Name = "lblFacturacion";
-            this.lblFacturacion.Size = new System.Drawing.Size(319, 46);
+            this.lblFacturacion.Size = new System.Drawing.Size(260, 37);
             this.lblFacturacion.TabIndex = 2;
             this.lblFacturacion.Text = "FACTURACION";
             // 
             // btnFinalizar
             // 
             this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.Location = new System.Drawing.Point(1012, 580);
+            this.btnFinalizar.Location = new System.Drawing.Point(759, 471);
+            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(168, 73);
+            this.btnFinalizar.Size = new System.Drawing.Size(126, 59);
             this.btnFinalizar.TabIndex = 4;
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // btnExportar
             // 
             this.btnExportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportar.Location = new System.Drawing.Point(785, 580);
+            this.btnExportar.Location = new System.Drawing.Point(589, 471);
+            this.btnExportar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(168, 73);
+            this.btnExportar.Size = new System.Drawing.Size(126, 59);
             this.btnExportar.TabIndex = 5;
             this.btnExportar.Text = "Exportar";
             this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // btnSalsa
             // 
             this.btnSalsa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalsa.Location = new System.Drawing.Point(517, 580);
+            this.btnSalsa.Location = new System.Drawing.Point(388, 471);
+            this.btnSalsa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalsa.Name = "btnSalsa";
-            this.btnSalsa.Size = new System.Drawing.Size(215, 73);
+            this.btnSalsa.Size = new System.Drawing.Size(161, 59);
             this.btnSalsa.TabIndex = 6;
             this.btnSalsa.Text = "Mostrar Salsa";
             this.btnSalsa.UseVisualStyleBackColor = true;
+            this.btnSalsa.Click += new System.EventHandler(this.btnSalsa_Click);
             // 
             // btnOrdenarPorProfesor
             // 
             this.btnOrdenarPorProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrdenarPorProfesor.Location = new System.Drawing.Point(127, 580);
+            this.btnOrdenarPorProfesor.Location = new System.Drawing.Point(95, 471);
+            this.btnOrdenarPorProfesor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrdenarPorProfesor.Name = "btnOrdenarPorProfesor";
-            this.btnOrdenarPorProfesor.Size = new System.Drawing.Size(330, 73);
+            this.btnOrdenarPorProfesor.Size = new System.Drawing.Size(248, 59);
             this.btnOrdenarPorProfesor.TabIndex = 7;
             this.btnOrdenarPorProfesor.Text = "Ordenar por Profesor";
             this.btnOrdenarPorProfesor.UseVisualStyleBackColor = true;
+            this.btnOrdenarPorProfesor.Click += new System.EventHandler(this.btnOrdenarPorProfesor_Click);
             // 
             // cmbClientes
             // 
             this.cmbClientes.FormattingEnabled = true;
-            this.cmbClientes.Location = new System.Drawing.Point(584, 137);
+            this.cmbClientes.Location = new System.Drawing.Point(438, 111);
+            this.cmbClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbClientes.Name = "cmbClientes";
-            this.cmbClientes.Size = new System.Drawing.Size(283, 24);
+            this.cmbClientes.Size = new System.Drawing.Size(213, 21);
             this.cmbClientes.TabIndex = 9;
+            this.cmbClientes.SelectionChangeCommitted += new System.EventHandler(this.cmbClientes_SelectionChangeCommitted);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(336, 137);
+            this.label1.Location = new System.Drawing.Point(252, 111);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 32);
+            this.label1.Size = new System.Drawing.Size(94, 26);
             this.label1.TabIndex = 8;
             this.label1.Text = "Cliente:";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(181, 198);
+            this.dataGridView1.Location = new System.Drawing.Point(136, 161);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(946, 315);
+            this.dataGridView1.Size = new System.Drawing.Size(710, 256);
             this.dataGridView1.TabIndex = 10;
             // 
             // Facturacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1278, 719);
+            this.ClientSize = new System.Drawing.Size(958, 584);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cmbClientes);
             this.Controls.Add(this.label1);
@@ -131,8 +144,10 @@ namespace AcademiaBaile.Vistas
             this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.lblFacturacion);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Facturacion";
             this.Text = "Facturacion";
+            this.Load += new System.EventHandler(this.Facturacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
