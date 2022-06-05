@@ -13,7 +13,10 @@ namespace AcademiaBaile.Controladores
     public class ControladorCursos
     {
         public static string cadenaConexion = ConfigurationManager.ConnectionStrings["Conexion"].ConnectionString;
-
+        /// <summary>
+        /// recupera los curso en una lista
+        /// </summary>
+        /// <returns></returns>
         public static List<Curso> recuperarCursosEnLista()
         {
             List<Curso> listaCursos = new List<Curso>();

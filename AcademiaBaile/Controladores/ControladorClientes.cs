@@ -14,6 +14,11 @@ namespace AcademiaBaile.Controladores
     {
      public static string cadenaConexion = ConfigurationManager.ConnectionStrings["Conexion"].ConnectionString;
 
+        /// <summary>
+        /// controlador clientes
+        /// </summary>
+        /// <returns></returns>
+
         public static DataSet recuperarClientesDataSet()
         {
             DataSet dataSet = new DataSet();
@@ -31,7 +36,11 @@ namespace AcademiaBaile.Controladores
             }
             return dataSet;
         }
-
+        /// <summary>
+        /// guarda las modificaciones
+        /// </summary>
+        /// <param name="dataSet"></param>
+        /// <returns></returns>
         public static bool guardarDatosDataSet(DataSet dataSet)
         {
             bool respuesta= true;
@@ -54,7 +63,11 @@ namespace AcademiaBaile.Controladores
             }
             return respuesta;
         }
-
+        /// <summary>
+        /// elimina los cursos de la bbdd
+        /// </summary>
+        /// <param name="idCliente"></param>
+        /// <returns></returns>
         public static bool eliminarCursos(int idCliente)
         {
             bool respuesta = false;

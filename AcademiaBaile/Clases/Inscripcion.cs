@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace AcademiaBaile.Clases
 {
+    /// <summary>
+    /// clase inscripciones
+    /// </summary>
     public class Inscripcion
     {
         public int idCurso { get; set; }
@@ -28,7 +31,7 @@ namespace AcademiaBaile.Clases
             this.estado = estado;
         }
 
-        //realmente no se porque hago esta clase por que no la uso para nada
+      
 
     }
 }

@@ -99,6 +99,14 @@ namespace AcademiaBaile.Controladores
 
         //guardar en json
         //ojo, no se guarda en debug
+
+
+        /// <summary>
+        /// este metodo hay que revisarlo
+        /// </summary>
+        /// <param name="lista"></param>
+        /// <param name="ruta"></param>
+        /// <returns></returns>
         public static bool guardarInscricionesEnJson(List<Inscripcion> lista ,string ruta)
         {
             try
@@ -112,6 +120,10 @@ namespace AcademiaBaile.Controladores
 
             return true;
         }
+
+
+       
+
 
 
     }

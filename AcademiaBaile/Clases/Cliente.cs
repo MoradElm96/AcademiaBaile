@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace AcademiaBaile.Clases
 {
+    /// <summary>
+    /// Clase cliente con sus constructores
+    /// </summary>
     public class Cliente
     {
         public int idCliente { get; set; }

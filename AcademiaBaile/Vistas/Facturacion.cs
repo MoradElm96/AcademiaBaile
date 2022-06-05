@@ -27,10 +27,12 @@ namespace AcademiaBaile.Vistas
 
         public void cargarDatos()
         {
+            //se esta usando un control personalizado 
             listaClientes = Controladores.ControladorClientes.recuperarClientesEnLista();
-            cmbClientes.DataSource = listaClientes;
-            cmbClientes.DisplayMember = "nombreCliente";
-            cmbClientes.ValueMember = "idCliente";
+            userControl11.cmbClientes.DataSource = listaClientes;
+
+            userControl11.cmbClientes.DisplayMember = "nombreCliente";
+            userControl11.cmbClientes.ValueMember = "idCliente";
 
 
         }
@@ -38,7 +40,8 @@ namespace AcademiaBaile.Vistas
         private void Facturacion_Load(object sender, EventArgs e)
         {
             cargarDatos();
-            cmbClientes.SelectedIndexChanged += CmbClientes_SelectedIndexChanged;
+            
+           userControl11.cmbClientes.SelectedIndexChanged += CmbClientes_SelectedIndexChanged;
 
         }
 
@@ -53,7 +56,7 @@ namespace AcademiaBaile.Vistas
             //error no muestra los cursos
             List<Inscripcion> listaInscripcionesTotal = ControladorInscripciones.recuperarInscripcionesEnLista();
 
-            listaInscripciones = listaInscripcionesTotal.FindAll( (Inscripcion) => Inscripcion.estado == "Abierta" && Inscripcion.idCliente == Convert.ToInt32(cmbClientes.SelectedValue));
+            listaInscripciones = listaInscripcionesTotal.FindAll( (Inscripcion) => Inscripcion.estado == "Abierta" && Inscripcion.idCliente == Convert.ToInt32(userControl11.cmbClientes.SelectedValue));
 
 
             dataGridView1.DataSource = listaInscripciones;
@@ -139,6 +142,22 @@ namespace AcademiaBaile.Vistas
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmbClientes_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        public static double calcularCoste(double descuento, double minutos, double costePorMinuto)
+        {
+            double CosteACobrar;
+
+             CosteACobrar = ((minutos * costePorMinuto) * (100 - descuento)) / 100;
+
+           // CosteACobrar = (minutos * costePorMinuto) - (((minutos * costePorMinuto) * descuento) / 100);
+
+            return CosteACobrar;
         }
     }
 }

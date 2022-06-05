@@ -9,7 +9,11 @@ namespace AcademiaBaile.Controladores
 {
    public class ControladorFormularios
     {
-
+        /// <summary>
+        /// importante, controlador para administrar los formularios y que no se creen nuevas instancias cada vez que se pulsen
+        /// </summary>
+        /// <param name="tipo"></param>
+        /// <returns></returns>
         public static bool EstaFormularioAbierto(Type tipo)
         {
             foreach (Form frm in Application.OpenForms)//lista 

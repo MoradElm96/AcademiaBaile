@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace AcademiaBaile.Clases
 {
+    /// <summary>
+    /// clase curso
+    /// </summary>
    public  class Curso
     {
 
