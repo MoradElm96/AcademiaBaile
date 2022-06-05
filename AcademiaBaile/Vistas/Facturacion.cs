@@ -119,7 +119,7 @@ namespace AcademiaBaile.Vistas
             saveFileDialog.Title = "Save json Files";
             saveFileDialog.CheckPathExists = true;
             saveFileDialog.DefaultExt = "json";
-            saveFileDialog.Filter = "Json files (*.json)|*.xml|All files (*.*)|*.*";
+            saveFileDialog.Filter = "Json files (*.json)|*.json|All files (*.*)|*.*";
             saveFileDialog.FilterIndex = 2;
             saveFileDialog.RestoreDirectory = true;
 
@@ -127,6 +127,7 @@ namespace AcademiaBaile.Vistas
             {
                 string nombreArchivo = saveFileDialog.FileName;
                 ControladorInscripciones.guardarInscricionesEnJson(listaInscripciones, nombreArchivo);
+                MessageBox.Show("Fichero exportado");
             }
             else
             {
