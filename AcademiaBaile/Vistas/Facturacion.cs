@@ -69,14 +69,15 @@ namespace AcademiaBaile.Vistas
         {
 
             /*a.Nombre).CompareTo(b.Nombre)*/
-           /*
+           
+            //realmente ordena por el id cliente
 
             List<Inscripcion> listaInscripcionesTotal = ControladorInscripciones.recuperarInscripcionesEnLista();
             listaInscripcionesTotal.Sort((a, b) => (Convert.ToInt32(a.idCliente) - Convert.ToInt32(b.idCliente)));
 
             dataGridView1.Refresh();
             listaInscripciones = listaInscripcionesTotal;
-            dataGridView1.DataSource = listaInscripciones;*/
+            dataGridView1.DataSource = listaInscripciones;
 
 
         }
@@ -119,7 +120,7 @@ namespace AcademiaBaile.Vistas
             saveFileDialog.Title = "Save json Files";
             saveFileDialog.CheckPathExists = true;
             saveFileDialog.DefaultExt = "json";
-            saveFileDialog.Filter = "Json files (*.json)|*.json|All files (*.*)|*.*";
+            saveFileDialog.Filter = "Json files (*.json)|*.json";
             saveFileDialog.FilterIndex = 2;
             saveFileDialog.RestoreDirectory = true;
 
