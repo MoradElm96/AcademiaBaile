@@ -1,10 +1,11 @@
 ﻿using AcademiaBaile.Clases;
-using MySql.Data.MySqlClient;
+using MySqlConnector;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -75,7 +76,7 @@ namespace AcademiaBaile.Controladores
                     int idCliente = dataReader.GetInt32("idCliente");
                     DateTime fechaAlta = dataReader.GetDateTime("fechaAlta");
                     int descuento = dataReader.GetInt32("descuentoPorMinuto");
-                    double minutosCurso = dataReader.GetDouble("minutosCurso");
+                    int minutosCurso = dataReader.GetInt32("minutosCurso");
                     string estado = dataReader.GetString("estado");
 
                  
@@ -113,6 +114,16 @@ namespace AcademiaBaile.Controladores
             return true;
         }
 
+        //para hacer una prueba unitaria
+        public  int calcularPerimetroCuadrado(int lado)
+        {
+             
+            int perimetro;
+
+            perimetro = lado * 4; 
+
+            return perimetro;
+        }
 
     }
 

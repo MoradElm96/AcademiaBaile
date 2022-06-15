@@ -19,16 +19,11 @@ namespace AcademiaBaile.Vistas
 
 
         DataSet dataSet = new DataSet();
-
         public void cargarDatos()
         {
-
             dataSet = Controladores.ControladorClientes.recuperarClientesDataSet();
             dataGridView1.Refresh();
-            dataGridView1.DataSource = dataSet.Tables[0];
-           
-           
-
+            dataGridView1.DataSource = dataSet.Tables[0];     
         }
 
 
@@ -44,9 +39,7 @@ namespace AcademiaBaile.Vistas
             if (Controladores.ControladorClientes.guardarDatosDataSet(this.dataSet))
             {
                 MessageBox.Show("Datos guardados");
-              
                 cargarDatos();
-
             }
             else
             {
@@ -76,7 +69,7 @@ namespace AcademiaBaile.Vistas
             {
                 if(dataGridView1.SelectedRows.Count > 0)
                 {
-                    Controladores.ControladorClientes.eliminarCursos(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
+                    Controladores.ControladorClientes.eliminarClientes(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
                     contadorBorrados++;
                 }
 

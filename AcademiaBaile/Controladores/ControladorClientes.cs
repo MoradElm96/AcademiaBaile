@@ -55,7 +55,7 @@ namespace AcademiaBaile.Controladores
             return respuesta;
         }
 
-        public static bool eliminarCursos(int idCliente)
+        public static bool eliminarClientes(int idCliente)
         {
             bool respuesta = false;
             try 

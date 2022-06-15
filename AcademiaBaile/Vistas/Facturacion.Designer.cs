@@ -37,6 +37,7 @@ namespace AcademiaBaile.Vistas
             this.cmbClientes = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.controlPersonaliado11 = new AcademiaBaile.ControlPersonaliado1();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@ namespace AcademiaBaile.Vistas
             // 
             this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizar.Location = new System.Drawing.Point(759, 471);
-            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(126, 59);
             this.btnFinalizar.TabIndex = 4;
@@ -67,7 +68,7 @@ namespace AcademiaBaile.Vistas
             // 
             this.btnExportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportar.Location = new System.Drawing.Point(589, 471);
-            this.btnExportar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExportar.Margin = new System.Windows.Forms.Padding(2);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(126, 59);
             this.btnExportar.TabIndex = 5;
@@ -79,7 +80,7 @@ namespace AcademiaBaile.Vistas
             // 
             this.btnSalsa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalsa.Location = new System.Drawing.Point(388, 471);
-            this.btnSalsa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalsa.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalsa.Name = "btnSalsa";
             this.btnSalsa.Size = new System.Drawing.Size(161, 59);
             this.btnSalsa.TabIndex = 6;
@@ -91,7 +92,7 @@ namespace AcademiaBaile.Vistas
             // 
             this.btnOrdenarPorProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdenarPorProfesor.Location = new System.Drawing.Point(95, 471);
-            this.btnOrdenarPorProfesor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdenarPorProfesor.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdenarPorProfesor.Name = "btnOrdenarPorProfesor";
             this.btnOrdenarPorProfesor.Size = new System.Drawing.Size(248, 59);
             this.btnOrdenarPorProfesor.TabIndex = 7;
@@ -103,10 +104,11 @@ namespace AcademiaBaile.Vistas
             // 
             this.cmbClientes.FormattingEnabled = true;
             this.cmbClientes.Location = new System.Drawing.Point(438, 111);
-            this.cmbClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbClientes.Margin = new System.Windows.Forms.Padding(2);
             this.cmbClientes.Name = "cmbClientes";
             this.cmbClientes.Size = new System.Drawing.Size(213, 21);
             this.cmbClientes.TabIndex = 9;
+            this.cmbClientes.SelectedIndexChanged += new System.EventHandler(this.cmbClientes_SelectedIndexChanged_1);
             this.cmbClientes.SelectionChangeCommitted += new System.EventHandler(this.cmbClientes_SelectionChangeCommitted);
             // 
             // label1
@@ -124,18 +126,27 @@ namespace AcademiaBaile.Vistas
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(136, 161);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(710, 256);
             this.dataGridView1.TabIndex = 10;
             // 
+            // controlPersonaliado11
+            // 
+            this.controlPersonaliado11.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.controlPersonaliado11.Location = new System.Drawing.Point(598, 43);
+            this.controlPersonaliado11.Name = "controlPersonaliado11";
+            this.controlPersonaliado11.Size = new System.Drawing.Size(348, 63);
+            this.controlPersonaliado11.TabIndex = 11;
+            // 
             // Facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 584);
+            this.Controls.Add(this.controlPersonaliado11);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cmbClientes);
             this.Controls.Add(this.label1);
@@ -144,7 +155,7 @@ namespace AcademiaBaile.Vistas
             this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.lblFacturacion);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Facturacion";
             this.Text = "Facturacion";
             this.Load += new System.EventHandler(this.Facturacion_Load);
@@ -164,5 +175,6 @@ namespace AcademiaBaile.Vistas
         private System.Windows.Forms.ComboBox cmbClientes;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private ControlPersonaliado1 controlPersonaliado11;
     }
 }

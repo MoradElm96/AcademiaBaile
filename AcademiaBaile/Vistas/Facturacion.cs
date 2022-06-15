@@ -28,9 +28,9 @@ namespace AcademiaBaile.Vistas
         public void cargarDatos()
         {
             listaClientes = Controladores.ControladorClientes.recuperarClientesEnLista();
-            cmbClientes.DataSource = listaClientes;
-            cmbClientes.DisplayMember = "nombreCliente";
-            cmbClientes.ValueMember = "idCliente";
+            controlPersonaliado11.cmbClientess.DataSource = listaClientes;
+            controlPersonaliado11.cmbClientess.DisplayMember = "nombreCliente";
+            controlPersonaliado11.cmbClientess.ValueMember = "idCliente";
 
 
         }
@@ -38,7 +38,7 @@ namespace AcademiaBaile.Vistas
         private void Facturacion_Load(object sender, EventArgs e)
         {
             cargarDatos();
-            cmbClientes.SelectedIndexChanged += CmbClientes_SelectedIndexChanged;
+            controlPersonaliado11.cmbClientess.SelectedIndexChanged += CmbClientes_SelectedIndexChanged;
 
         }
 
@@ -46,14 +46,14 @@ namespace AcademiaBaile.Vistas
         {
 
 
-           
-            
+
+
 
 
             //error no muestra los cursos
             List<Inscripcion> listaInscripcionesTotal = ControladorInscripciones.recuperarInscripcionesEnLista();
 
-            listaInscripciones = listaInscripcionesTotal.FindAll( (Inscripcion) => Inscripcion.estado == "Abierta" && Inscripcion.idCliente == Convert.ToInt32(cmbClientes.SelectedValue));
+            listaInscripciones = listaInscripcionesTotal.FindAll((Inscripcion) => Inscripcion.estado == "Abierta" && Inscripcion.idCliente == Convert.ToInt32(controlPersonaliado11.cmbClientess.SelectedValue));
 
 
             dataGridView1.DataSource = listaInscripciones;
@@ -62,14 +62,14 @@ namespace AcademiaBaile.Vistas
 
         private void cmbClientes_SelectionChangeCommitted(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnOrdenarPorProfesor_Click(object sender, EventArgs e)
         {
 
             /*a.Nombre).CompareTo(b.Nombre)*/
-           
+
             //realmente ordena por el id cliente
 
             List<Inscripcion> listaInscripcionesTotal = ControladorInscripciones.recuperarInscripcionesEnLista();
@@ -97,7 +97,7 @@ namespace AcademiaBaile.Vistas
                     listaInscripciones.Add(Inscripcion);
                 }
 
-               
+
 
             });
             if (listaInscripciones.Count > 0)
@@ -124,7 +124,7 @@ namespace AcademiaBaile.Vistas
             saveFileDialog.FilterIndex = 2;
             saveFileDialog.RestoreDirectory = true;
 
-            if(saveFileDialog.ShowDialog() == DialogResult.OK)
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string nombreArchivo = saveFileDialog.FileName;
                 ControladorInscripciones.guardarInscricionesEnJson(listaInscripciones, nombreArchivo);
@@ -141,6 +141,11 @@ namespace AcademiaBaile.Vistas
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmbClientes_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
